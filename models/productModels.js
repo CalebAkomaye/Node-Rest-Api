@@ -6,4 +6,11 @@ const find = () => {
     })
 }
 
-module.exports = {find}
+const findById = (id) => {
+    return new Promise((resovle, reject) => {
+        const item = data.find(item => item.id === id)
+        resovle(item)
+    })
+}
+
+module.exports = {find, findById}
